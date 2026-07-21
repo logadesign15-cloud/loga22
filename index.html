@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Professional computer services including laptop repair, desktop repair, gaming PC builds, SSD upgrades, RAM upgrades, Windows installation, virus removal, thermal paste replacement and data recovery."/>
+  <meta name="keywords" content="laptop repair, desktop repair, gaming PC build, SSD upgrade, RAM upgrade, Windows installation, virus removal, computer services Malaysia"/>
+  <meta name="author" content="NESH Computer Services"/>
+  <meta property="og:title" content="NESH Computer Services | Professional Laptop &amp; PC Repair"/>
+  <meta property="og:description" content="Professional computer services including laptop repair, desktop repair, gaming PC builds and more."/>
+  <meta property="og:type" content="website"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<title>NESH Computer Services | Professional Laptop &amp; PC Repair</title>
+  <style>
+    :root{--primary:#0B4F9C;--primary-dark:#083d7a;--accent:#3FA9F5;--accent-light:#6dc0f8;--white:#FFFFFF;--dark:#1A1A1A;--gray-bg:#F8FAFC;--gray-light:#EEF2F7;--gray-mid:#94A3B8;--gray-text:#64748B;--border:#E2E8F0;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 16px rgba(11,79,156,.10);--shadow-lg:0 8px 32px rgba(11,79,156,.14);--shadow-xl:0 16px 48px rgba(11,79,156,.18);--radius:16px;--radius-sm:10px;--radius-lg:24px;--t:all .3s cubic-bezier(.4,0,.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter','Poppins',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden;line-height:1.6}
+    h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif}
+    #loader{position:fixed;inset:0;z-index:9999;background:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .5s ease,visibility .5s ease}
+    #loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-logo{width:110px;animation:lp 1.2s ease-in-out infinite}
+    @keyframes lp{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:.85}}
+    .loader-bar{width:200px;height:4px;background:var(--gray-light);border-radius:99px;overflow:hidden}
+    .loader-fill{height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:99px;animation:lf 1.4s ease-in-out forwards}
+    @keyframes lf{to{width:100%}}
+    .loader-text{font-family:'Poppins',sans-serif;font-size:.78rem;color:var(--gray-text);letter-spacing:.15em;text-transform:uppercase}
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:var(--t)}
+    nav.scrolled{box-shadow:var(--shadow-md)}
+    .nav-inner{max-width:1280px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .nav-logo img{height:48px;width:auto;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+    .nav-links a{font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:500;color:var(--dark);text-decoration:none;padding:8px 16px;border-radius:var(--radius-sm);transition:var(--t)}
+    .nav-links a:hover,.nav-links a.active{color:var(--primary);background:rgba(11,79,156,.06)}
+    .nav-cta{background:var(--primary)!important;color:var(--white)!important;padding:10px 22px!important;border-radius:50px!important;font-weight:600!important;box-shadow:0 4px 14px rgba(11,79,156,.3)}
+    .nav-cta:hover{background:var(--primary-dark)!important;transform:translateY(-1px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:8px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;transition:var(--t)}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mob-menu{display:none;flex-direction:column;gap:4px;padding:16px 24px 20px;background:var(--white);border-bottom:1px solid var(--border);position:absolute;top:72px;left:0;right:0;box-shadow:var(--shadow-md)}
+    .mob-menu.open{display:flex}
+    .mob-menu a{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:500;color:var(--dark);text-decoration:none;padding:12px 16px;border-radius:var(--radius-sm);transition:var(--t)}
+    .mob-menu a:hover{background:var(--gray-bg);color:var(--primary)}
+    .mob-cta{background:var(--primary);color:var(--white)!important;text-align:center;margin-top:8px;border-radius:50px;font-weight:600}
+    .pt{padding-top:72px}
+    section{padding:80px 0}
+    .container{max-width:1280px;margin:0 auto;padding:0 32px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(11,79,156,.08);color:var(--primary);font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:16px}
+    .sec-title{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:var(--dark);line-height:1.2;margin-bottom:16px}
+    .sec-title span{color:var(--primary)}
+    .sec-sub{font-size:1.05rem;color:var(--gray-text);max-width:600px;line-height:1.7}
+    .sec-hdr{text-align:center;margin-bottom:56px}
+    .sec-hdr .sec-sub{margin:0 auto}
+    .divider{width:60px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--primary),var(--accent));margin:16px auto 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:600;padding:14px 28px;border-radius:50px;cursor:pointer;border:none;text-decoration:none;transition:var(--t);position:relative;overflow:hidden;letter-spacing:.01em}
+    .btn-primary{background:var(--primary);color:var(--white);box-shadow:0 4px 20px rgba(11,79,156,.35)}
+    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(11,79,156,.45)}
+    .btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+    .btn-outline:hover{background:var(--primary);color:var(--white);transform:translateY(-2px)}
+    .btn-white{background:var(--white);color:var(--primary)}
+    .btn-white:hover{background:var(--gray-bg);transform:translateY(-2px)}
+    .btn-accent{background:var(--accent);color:var(--white);box-shadow:0 4px 16px rgba(63,169,245,.35)}
+    .btn-accent:hover{background:var(--accent-light);transform:translateY(-2px)}
+    .btn-sm{padding:10px 20px;font-size:.84rem}
+    .card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--t);overflow:hidden}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(11,79,156,.15)}
+    .cta-banner{background:linear-gradient(135deg,var(--primary) 0%,#1565C0 50%,#0d47a1 100%);position:relative;overflow:hidden}
+    .cta-banner::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%)}
+    .cta-banner::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(63,169,245,.15) 0%,transparent 70%)}
+    .cta-inner{text-align:center;position:relative;z-index:1;padding:60px 0}
+    .cta-inner h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--white);margin-bottom:14px}
+    .cta-inner p{font-size:1.05rem;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    footer{background:#0a1628;color:rgba(255,255,255,.8);padding:60px 0 0}
+    .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+    .ft-brand img{height:48px;filter:brightness(1.2);margin-bottom:16px;display:block}
+    .ft-brand p{font-size:.88rem;line-height:1.7;color:rgba(255,255,255,.6);margin-bottom:20px}
+    .socials{display:flex;gap:10px}
+    .soc{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.9rem;transition:var(--t);text-decoration:none}
+    .soc:hover{background:var(--primary);color:var(--white);transform:translateY(-2px)}
+    .ft-col h4{font-size:.9rem;font-weight:700;color:var(--white);margin-bottom:18px;letter-spacing:.05em}
+    .ft-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .ft-links a{font-size:.87rem;color:rgba(255,255,255,.6);text-decoration:none;transition:var(--t);display:flex;align-items:center;gap:6px}
+    .ft-links a:hover{color:var(--accent);padding-left:4px}
+    .ft-links a i{font-size:.65rem}
+    .ft-ci{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px}
+    .ft-ci i{color:var(--accent);margin-top:2px;font-size:.85rem}
+    .ft-ci span{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.5}
+    .ft-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .ft-bottom p{font-size:.82rem;color:rgba(255,255,255,.4)}
+    .ft-bot-links{display:flex;gap:20px}
+    .ft-bot-links a{font-size:.82rem;color:rgba(255,255,255,.4);text-decoration:none;transition:var(--t)}
+    .ft-bot-links a:hover{color:var(--accent)}
+    .fi{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .fi.vis{opacity:1;transform:translateY(0)}
+    .fd1{transition-delay:.1s}.fd2{transition-delay:.2s}.fd3{transition-delay:.3s}.fd4{transition-delay:.4s}
+    #toast{position:fixed;bottom:32px;right:32px;z-index:5000;background:var(--primary);color:var(--white);padding:14px 24px;border-radius:12px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;box-shadow:var(--shadow-xl);transform:translateY(80px);opacity:0;pointer-events:none;transition:all .4s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;gap:10px}
+    #toast.show{transform:translateY(0);opacity:1}
+    .pg-hero{background:linear-gradient(135deg,#F0F6FF 0%,#F8FAFC 100%);padding:80px 0 60px;text-align:center}
+    @media(max-width:1100px){.ft-grid{grid-template-columns:1fr 1fr;gap:32px}}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}section{padding:60px 0}.container{padding:0 20px}.nav-inner{padding:0 20px}.ft-grid{grid-template-columns:1fr;gap:28px}.ft-bottom{flex-direction:column;text-align:center}}
+
+  .hero{min-height:calc(100vh - 72px);background:linear-gradient(135deg,#F0F6FF 0%,#F8FAFC 50%,#EAF4FF 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:60px 0}
+  .hero::before{content:'';position:absolute;top:-60px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(63,169,245,.12) 0%,transparent 70%);pointer-events:none}
+  .tech-dots{position:absolute;inset:0;pointer-events:none;overflow:hidden;background-image:radial-gradient(circle,rgba(11,79,156,.06) 1px,transparent 1px);background-size:32px 32px}
+  .hero-g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(11,79,156,.08);color:var(--primary);font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:12px;color:var(--dark)}
+  .hero h1 span{color:var(--primary);display:block}
+  .hero-tag{font-family:'Poppins',sans-serif;font-size:1.2rem;font-weight:600;color:var(--accent);margin-bottom:20px;letter-spacing:.02em}
+  .hero-desc{font-size:1.05rem;color:var(--gray-text);line-height:1.8;margin-bottom:36px;max-width:520px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+  .hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+  .hs-num{font-family:'Poppins',sans-serif;font-size:1.8rem;font-weight:800;color:var(--primary);line-height:1}
+  .hs-lbl{font-size:.8rem;color:var(--gray-text);font-weight:500;margin-top:2px}
+  .hero-rhs{position:relative;display:flex;justify-content:center;align-items:center}
+  .hero-img-bg{position:absolute;inset:-20px;background:linear-gradient(135deg,rgba(11,79,156,.06),rgba(63,169,245,.08));border-radius:40px;transform:rotate(3deg)}
+  .hero-card{position:relative;z-index:1;background:var(--white);border-radius:28px;padding:24px;box-shadow:var(--shadow-xl);border:1px solid var(--border)}
+  .pc-vis{width:100%;max-width:440px;aspect-ratio:4/3;border-radius:20px;background:linear-gradient(135deg,#0a0a1a 0%,#0d1b2a 30%,#0b1535 60%,#0a0a1a 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .pc-vis::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(63,169,245,.35) 0%,transparent 55%),radial-gradient(circle at 70% 30%,rgba(11,79,156,.4) 0%,transparent 50%)}
+  .pc-inner{position:relative;z-index:2;display:flex;align-items:flex-end;gap:16px}
+  .pc-mon{width:170px;height:115px;background:linear-gradient(135deg,#0d1b2a,#0a1020);border-radius:10px 10px 4px 4px;border:2px solid rgba(63,169,245,.3);position:relative;overflow:hidden;box-shadow:0 0 20px rgba(63,169,245,.15)}
+  .mon-scr{position:absolute;inset:6px;background:linear-gradient(135deg,#061428,#0a1f3a);border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .mon-txt{font-family:'Courier New',monospace;font-size:7px;color:rgba(63,169,245,.85);text-align:left;padding:6px;line-height:1.7;position:relative;z-index:1}
+  .mon-base{width:40px;height:14px;background:linear-gradient(135deg,#1a2a3a,#0d1a28);margin:0 auto;border-radius:0 0 4px 4px}
+  .mon-foot{width:60px;height:6px;background:linear-gradient(135deg,#1a2a3a,#0d1a28);border-radius:3px;margin:0 auto}
+  .pc-case{width:120px;height:190px;background:linear-gradient(160deg,#1a2a3a,#0d1a28,#0a1020);border-radius:14px;border:1px solid rgba(63,169,245,.3);position:relative;overflow:hidden;box-shadow:0 0 40px rgba(63,169,245,.25)}
+  .pc-case::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);animation:scan 2.5s ease-in-out infinite}
+  @keyframes scan{0%{transform:translateY(0);opacity:1}100%{transform:translateY(190px);opacity:0}}
+  .rgb{position:absolute;left:12px;top:30px;bottom:30px;width:4px;border-radius:2px;background:linear-gradient(180deg,#3FA9F5,#0B4F9C,#3FA9F5);box-shadow:0 0 10px rgba(63,169,245,.8);animation:glow 1.5s ease-in-out infinite alternate}
+  @keyframes glow{from{box-shadow:0 0 10px rgba(63,169,245,.8)}to{box-shadow:0 0 20px rgba(63,169,245,1),0 0 30px rgba(11,79,156,.5)}}
+  .fans{position:absolute;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}
+  .fan{width:34px;height:34px;border-radius:50%;border:2px solid rgba(63,169,245,.4);display:flex;align-items:center;justify-content:center;box-shadow:0 0 8px rgba(63,169,245,.3)}
+  .fan::before{content:"\2726";color:rgba(63,169,245,.7);font-size:16px;animation:spin 1.5s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .pc-glow{position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(transparent,rgba(63,169,245,.15))}
+  .fl-badge{position:absolute;background:var(--white);border-radius:14px;padding:12px 18px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:12px;font-family:'Poppins',sans-serif;border:1px solid var(--border);z-index:3}
+  .fl1{top:-16px;right:-16px;animation:fl1 3s ease-in-out infinite}
+  .fl2{bottom:-16px;left:-16px;animation:fl2 3s ease-in-out infinite .5s}
+  @keyframes fl1{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  @keyframes fl2{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+  .fl-ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .fl-ic.b{background:rgba(11,79,156,.1);color:var(--primary)}
+  .fl-ic.a{background:rgba(63,169,245,.1);color:var(--accent)}
+  .fb-t{font-size:.78rem;font-weight:700;color:var(--dark)}
+  .fb-s{font-size:.7rem;color:var(--gray-text)}
+  .why-g{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .why-c{padding:32px 24px;text-align:center}
+  .why-ic{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(11,79,156,.08),rgba(63,169,245,.12));display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--primary);margin:0 auto 20px;transition:var(--t)}
+  .why-c:hover .why-ic{background:var(--primary);color:var(--white);transform:scale(1.1) rotate(5deg)}
+  .why-c h3{font-size:1.05rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+  .why-c p{font-size:.88rem;color:var(--gray-text);line-height:1.6}
+  .svcs-bg{background:var(--gray-bg)}
+  .svcs-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px}
+  .sv-c{padding:28px 24px;cursor:pointer}
+  .sv-ic{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(11,79,156,.08),rgba(63,169,245,.12));display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--primary);margin-bottom:18px;transition:var(--t)}
+  .sv-c:hover .sv-ic{background:linear-gradient(135deg,var(--primary),var(--accent));color:var(--white)}
+  .sv-c h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+  .sv-c p{font-size:.84rem;color:var(--gray-text);line-height:1.6;margin-bottom:18px}
+  .testi-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
+  .tc{padding:28px}
+  .stars{color:#F59E0B;margin-bottom:14px;font-size:.9rem;display:flex}
+  .tt{font-size:.92rem;color:var(--gray-text);line-height:1.7;margin-bottom:20px;font-style:italic}
+  .tt::before{content:open-quote;font-size:2rem;color:var(--accent);line-height:0;vertical-align:-.4em;margin-right:4px}
+  .ta{display:flex;align-items:center;gap:12px}
+  .tav{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;color:var(--white)}
+  .tn{font-weight:700;font-size:.9rem;color:var(--dark)}.tr{font-size:.78rem;color:var(--gray-text)}
+  @media(max-width:900px){.hero-g{grid-template-columns:1fr;gap:40px}.hero-rhs{order:-1}.why-g{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.why-g{grid-template-columns:1fr}.hero h1{font-size:2rem}.hero-btns{flex-direction:column}.hero-btns .btn{width:100%;justify-content:center}.fl-badge{display:none}}
+</style>
+</head>
+<body>
+
+<div id="toast"><i class="fas fa-check-circle"></i> <span id="tmsg">Done!</span></div>
+<div id="loader"><img class="loader-logo" src="logo.png" alt="NESH"/><div class="loader-bar"><div class="loader-fill"></div></div><p class="loader-text">Loading...</p></div>
+<nav id="nb">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="NESH Computer Services"/></a>
+    <ul class="nav-links"><li><a href="index.html" class="active">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html" class="nav-cta">Get Quote</a></li></ul>
+    <button class="hamburger" id="hb" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-menu" id="mm"><a href="index.html" onclick="closeMenu()">Home</a><a href="services.html" onclick="closeMenu()">Services</a><a href="about.html" onclick="closeMenu()">About</a><a href="contact.html" onclick="closeMenu()">Contact</a><a href="contact.html" class="mob-cta" onclick="closeMenu()">Get Quote</a></div>
+</nav>
+
+<div class="pt">
+<section class="hero">
+  <div class="tech-dots"></div>
+  <div class="container">
+    <div class="hero-g">
+      <div>
+        <div class="hero-badge fi"><i class="fas fa-shield-halved"></i> Trusted Since Day One</div>
+        <h1 class="fi fd1">Professional <span>Computer Solutions</span></h1>
+        <p class="hero-tag fi fd2">Fast. Reliable. Trusted.</p>
+        <p class="hero-desc fi fd2">We provide professional laptop and desktop repair services, PC upgrades, gaming PC builds, software installation and IT solutions for individuals and businesses.</p>
+        <div class="hero-btns fi fd3">
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-comments"></i> Get a Quote</a>
+          <a href="services.html" class="btn btn-outline"><i class="fas fa-grid-2"></i> View Services</a>
+        </div>
+        <div class="hero-stats fi fd4">
+          <div><div class="hs-num" data-count="500">0</div><div class="hs-lbl">Happy Customers</div></div>
+          <div><div class="hs-num" data-count="10">0</div><div class="hs-lbl">Services Offered</div></div>
+          <div><div class="hs-num" data-count="100">0</div><div class="hs-lbl">% Satisfaction</div></div>
+        </div>
+      </div>
+      <div class="hero-rhs fi fd2">
+        <div class="hero-img-bg"></div>
+        <div class="hero-card">
+          <div class="pc-vis">
+            <div class="pc-inner">
+              <div>
+                <div class="pc-mon"><div class="mon-scr"><div class="mon-txt">&gt; System Online<br>&gt; GPU: RTX 4090<br>&gt; RAM: 64GB DDR5<br>&gt; SSD: 2TB NVMe<br>&gt; Temp: 28&deg;C &check;</div></div></div>
+                <div class="mon-base"></div><div class="mon-foot"></div>
+              </div>
+              <div class="pc-case">
+                <div class="rgb"></div>
+                <div class="fans"><div class="fan"></div><div class="fan" style="animation-delay:.3s"></div></div>
+                <div class="pc-glow"></div>
+              </div>
+            </div>
+          </div>
+          <div class="fl-badge fl1"><div class="fl-ic b"><i class="fas fa-bolt"></i></div><div><div class="fb-t">Fast Turnaround</div><div class="fb-s">Same day service</div></div></div>
+          <div class="fl-badge fl2"><div class="fl-ic a"><i class="fas fa-star"></i></div><div><div class="fb-t">5-Star Rated</div><div class="fb-s">Trusted by 500+</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="badge"><i class="fas fa-award"></i> Why Choose Us</div>
+      <h2 class="sec-title">Why <span>NESH</span> Computer Services?</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="why-g">
+      <div class="card why-c fi"><div class="why-ic"><i class="fas fa-user-tie"></i></div><h3>Professional Service</h3><p>Certified technicians with years of hands-on experience handling all types of computer issues.</p></div>
+      <div class="card why-c fi fd1"><div class="why-ic"><i class="fas fa-shield-check"></i></div><h3>Reliable Solutions</h3><p>We stand behind our work with quality guarantees and reliable long-term solutions.</p></div>
+      <div class="card why-c fi fd2"><div class="why-ic"><i class="fas fa-tags"></i></div><h3>Affordable Pricing</h3><p>Transparent, competitive pricing with no hidden fees. Quality service at the right price.</p></div>
+      <div class="card why-c fi fd3"><div class="why-ic"><i class="fas fa-clock-rotate-left"></i></div><h3>Fast Turnaround</h3><p>Most repairs completed same day or next day. We respect your time and productivity.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="svcs-bg">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="badge"><i class="fas fa-wrench"></i> Our Services</div>
+      <h2 class="sec-title">What We <span>Offer</span></h2>
+      <p class="sec-sub">From quick repairs to custom gaming builds &mdash; we cover all your computer needs.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="svcs-g">
+      <div class="card sv-c fi"><div class="sv-ic"><i class="fas fa-laptop-medical"></i></div><h3>Laptop Repair</h3><p>Screen, keyboard, battery, charging issues and comprehensive diagnostics.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi fd1"><div class="sv-ic"><i class="fas fa-desktop"></i></div><h3>Desktop PC Repair</h3><p>Motherboard, power supply, hardware repair and full system optimization.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi fd2"><div class="sv-ic"><i class="fas fa-gamepad"></i></div><h3>Custom Gaming PC Build</h3><p>Gaming rigs, streaming setups, workstations with professional cable management.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi fd3"><div class="sv-ic"><i class="fas fa-hard-drive"></i></div><h3>SSD Upgrade</h3><p>Boost speed, faster boot times and improved application performance.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi"><div class="sv-ic"><i class="fas fa-memory"></i></div><h3>RAM Upgrade</h3><p>Increase multitasking capability and overall system performance.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi fd1"><div class="sv-ic"><i class="fab fa-windows"></i></div><h3>Windows Installation</h3><p>Fresh OS install, drivers, software setup and activation support.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi fd2"><div class="sv-ic"><i class="fas fa-virus-slash"></i></div><h3>Virus Removal</h3><p>Malware, spyware removal and full system cleanup and protection.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi fd3"><div class="sv-ic"><i class="fas fa-broom"></i></div><h3>PC Cleaning</h3><p>Dust removal, fan cleaning and internal maintenance for optimal cooling.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi"><div class="sv-ic"><i class="fas fa-temperature-half"></i></div><h3>Thermal Paste Replacement</h3><p>CPU &amp; GPU thermal paste for optimal temperature management.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+      <div class="card sv-c fi fd1"><div class="sv-ic"><i class="fas fa-database"></i></div><h3>Data Backup &amp; Recovery</h3><p>Recover lost files, backup solutions and storage migration.</p><a href="services.html" class="btn btn-outline btn-sm">Read More</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container"><div class="cta-inner">
+    <h2>Build Your Dream PC Today</h2>
+    <p>Let our experts craft the perfect custom gaming or workstation PC tailored to your needs and budget.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-white"><i class="fas fa-comments"></i> Contact Us</a>
+      <a href="https://wa.me/60113084277" target="_blank" class="btn btn-accent"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+    </div>
+  </div></div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="badge"><i class="fas fa-star"></i> Testimonials</div>
+      <h2 class="sec-title">What Our <span>Customers Say</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="testi-g">
+      <div class="card tc fi"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="tt">NESH fixed my laptop screen the same day. Excellent service, fast turnaround and very affordable. Highly recommend!</p><div class="ta"><div class="tav">A</div><div><div class="tn">Ahmad Farid</div><div class="tr">Regular Customer</div></div></div></div>
+      <div class="card tc fi fd1"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="tt">Built my gaming PC with NESH &mdash; cable management is clean, RGB is perfect, and performance blew me away!</p><div class="ta"><div class="tav">R</div><div><div class="tn">Ravinesh Kumar</div><div class="tr">Gaming Enthusiast</div></div></div></div>
+      <div class="card tc fi fd2"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="tt">Virus removal was quick, my PC runs like new. Professional staff who explain everything clearly. Will return.</p><div class="ta"><div class="tav">S</div><div><div class="tn">Siti Nabilah</div><div class="tr">Small Business Owner</div></div></div></div>
+      <div class="card tc fi fd3"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="tt">SSD upgrade transformed my old laptop &mdash; boots in seconds now! Great value and honest advice from the team.</p><div class="ta"><div class="tav">M</div><div><div class="tn">Marcus Tan</div><div class="tr">Student</div></div></div></div>
+      <div class="card tc fi fd4"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="tt">NESH recovered all my important files after my hard drive failed. Lifesavers! Truly professional and trustworthy.</p><div class="ta"><div class="tav">L</div><div><div class="tn">Lee Mei Ling</div><div class="tr">Freelance Designer</div></div></div></div>
+    </div>
+  </div>
+</section>
+</div>
+<script>
+function animCounts(){document.querySelectorAll('[data-count]').forEach(function(el){var t=parseInt(el.dataset.count),s=el.dataset.count==="100"?"%":"+",c=0,step=t/50;var timer=setInterval(function(){c=Math.min(c+step,t);el.textContent=Math.floor(c)+s;if(c>=t)clearInterval(timer)},30)})}
+window.addEventListener('load',function(){setTimeout(animCounts,1600)});
+</script>
+
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="logo.png" alt="NESH Computer Services"/>
+        <p>Professional computer services including laptop repair, desktop repair, gaming PC builds, upgrades and maintenance. Trusted by hundreds across Malaysia.</p>
+        <div class="socials">
+          <a class="soc" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="soc" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="soc" href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a class="soc" href="https://wa.me/60113084277" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Quick Links</h4>
+        <ul class="ft-links">
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Services</h4>
+        <ul class="ft-links">
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Laptop Repair</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Desktop PC Repair</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Gaming PC Build</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> SSD &amp; RAM Upgrade</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Data Recovery</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <div class="ft-ci"><i class="fab fa-whatsapp"></i><span><a href="https://wa.me/60113084277" style="color:rgba(255,255,255,.6);text-decoration:none">011-30842771</a></span></div>
+        <div class="ft-ci"><i class="fas fa-map-marker-alt"></i><span>Malaysia</span></div>
+        <div class="ft-ci"><i class="fas fa-clock"></i><span>Mon - Sat: 9AM - 6PM<br>Sunday: Closed</span></div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>&copy; 2025 NESH Computer Services. All rights reserved.</p>
+      <div class="ft-bot-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('load',function(){setTimeout(function(){document.getElementById('loader').classList.add('hidden');initAnim();},1500)});
+window.addEventListener('scroll',function(){document.getElementById('nb').classList.toggle('scrolled',window.scrollY>10)});
+function toggleMenu(){document.getElementById('hb').classList.toggle('open');document.getElementById('mm').classList.toggle('open')}
+function closeMenu(){document.getElementById('hb').classList.remove('open');document.getElementById('mm').classList.remove('open')}
+function initAnim(){var els=document.querySelectorAll('.fi');var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');ob.unobserve(e.target)}})},{threshold:.1});els.forEach(function(el){ob.observe(el)})}
+document.addEventListener('DOMContentLoaded',function(){initAnim()});
+function showToast(msg,err){var t=document.getElementById('toast');document.getElementById('tmsg').textContent=msg;t.style.background=err?'#DC2626':'var(--primary)';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},3500)}
+</script>
+
+</body>
+</html>

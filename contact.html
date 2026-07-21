@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Professional computer services including laptop repair, desktop repair, gaming PC builds, SSD upgrades, RAM upgrades, Windows installation, virus removal, thermal paste replacement and data recovery."/>
+  <meta name="keywords" content="laptop repair, desktop repair, gaming PC build, SSD upgrade, RAM upgrade, Windows installation, virus removal, computer services Malaysia"/>
+  <meta name="author" content="NESH Computer Services"/>
+  <meta property="og:title" content="NESH Computer Services | Professional Laptop &amp; PC Repair"/>
+  <meta property="og:description" content="Professional computer services including laptop repair, desktop repair, gaming PC builds and more."/>
+  <meta property="og:type" content="website"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<title>Contact Us | NESH Computer Services</title>
+  <style>
+    :root{--primary:#0B4F9C;--primary-dark:#083d7a;--accent:#3FA9F5;--accent-light:#6dc0f8;--white:#FFFFFF;--dark:#1A1A1A;--gray-bg:#F8FAFC;--gray-light:#EEF2F7;--gray-mid:#94A3B8;--gray-text:#64748B;--border:#E2E8F0;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 16px rgba(11,79,156,.10);--shadow-lg:0 8px 32px rgba(11,79,156,.14);--shadow-xl:0 16px 48px rgba(11,79,156,.18);--radius:16px;--radius-sm:10px;--radius-lg:24px;--t:all .3s cubic-bezier(.4,0,.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter','Poppins',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden;line-height:1.6}
+    h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif}
+    #loader{position:fixed;inset:0;z-index:9999;background:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .5s ease,visibility .5s ease}
+    #loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-logo{width:110px;animation:lp 1.2s ease-in-out infinite}
+    @keyframes lp{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:.85}}
+    .loader-bar{width:200px;height:4px;background:var(--gray-light);border-radius:99px;overflow:hidden}
+    .loader-fill{height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:99px;animation:lf 1.4s ease-in-out forwards}
+    @keyframes lf{to{width:100%}}
+    .loader-text{font-family:'Poppins',sans-serif;font-size:.78rem;color:var(--gray-text);letter-spacing:.15em;text-transform:uppercase}
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:var(--t)}
+    nav.scrolled{box-shadow:var(--shadow-md)}
+    .nav-inner{max-width:1280px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .nav-logo img{height:48px;width:auto;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+    .nav-links a{font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:500;color:var(--dark);text-decoration:none;padding:8px 16px;border-radius:var(--radius-sm);transition:var(--t)}
+    .nav-links a:hover,.nav-links a.active{color:var(--primary);background:rgba(11,79,156,.06)}
+    .nav-cta{background:var(--primary)!important;color:var(--white)!important;padding:10px 22px!important;border-radius:50px!important;font-weight:600!important;box-shadow:0 4px 14px rgba(11,79,156,.3)}
+    .nav-cta:hover{background:var(--primary-dark)!important;transform:translateY(-1px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:8px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;transition:var(--t)}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mob-menu{display:none;flex-direction:column;gap:4px;padding:16px 24px 20px;background:var(--white);border-bottom:1px solid var(--border);position:absolute;top:72px;left:0;right:0;box-shadow:var(--shadow-md)}
+    .mob-menu.open{display:flex}
+    .mob-menu a{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:500;color:var(--dark);text-decoration:none;padding:12px 16px;border-radius:var(--radius-sm);transition:var(--t)}
+    .mob-menu a:hover{background:var(--gray-bg);color:var(--primary)}
+    .mob-cta{background:var(--primary);color:var(--white)!important;text-align:center;margin-top:8px;border-radius:50px;font-weight:600}
+    .pt{padding-top:72px}
+    section{padding:80px 0}
+    .container{max-width:1280px;margin:0 auto;padding:0 32px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(11,79,156,.08);color:var(--primary);font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:16px}
+    .sec-title{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:var(--dark);line-height:1.2;margin-bottom:16px}
+    .sec-title span{color:var(--primary)}
+    .sec-sub{font-size:1.05rem;color:var(--gray-text);max-width:600px;line-height:1.7}
+    .sec-hdr{text-align:center;margin-bottom:56px}
+    .sec-hdr .sec-sub{margin:0 auto}
+    .divider{width:60px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--primary),var(--accent));margin:16px auto 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:600;padding:14px 28px;border-radius:50px;cursor:pointer;border:none;text-decoration:none;transition:var(--t);position:relative;overflow:hidden;letter-spacing:.01em}
+    .btn-primary{background:var(--primary);color:var(--white);box-shadow:0 4px 20px rgba(11,79,156,.35)}
+    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(11,79,156,.45)}
+    .btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+    .btn-outline:hover{background:var(--primary);color:var(--white);transform:translateY(-2px)}
+    .btn-white{background:var(--white);color:var(--primary)}
+    .btn-white:hover{background:var(--gray-bg);transform:translateY(-2px)}
+    .btn-accent{background:var(--accent);color:var(--white);box-shadow:0 4px 16px rgba(63,169,245,.35)}
+    .btn-accent:hover{background:var(--accent-light);transform:translateY(-2px)}
+    .btn-sm{padding:10px 20px;font-size:.84rem}
+    .card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--t);overflow:hidden}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(11,79,156,.15)}
+    .cta-banner{background:linear-gradient(135deg,var(--primary) 0%,#1565C0 50%,#0d47a1 100%);position:relative;overflow:hidden}
+    .cta-banner::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%)}
+    .cta-banner::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(63,169,245,.15) 0%,transparent 70%)}
+    .cta-inner{text-align:center;position:relative;z-index:1;padding:60px 0}
+    .cta-inner h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--white);margin-bottom:14px}
+    .cta-inner p{font-size:1.05rem;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    footer{background:#0a1628;color:rgba(255,255,255,.8);padding:60px 0 0}
+    .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+    .ft-brand img{height:48px;filter:brightness(1.2);margin-bottom:16px;display:block}
+    .ft-brand p{font-size:.88rem;line-height:1.7;color:rgba(255,255,255,.6);margin-bottom:20px}
+    .socials{display:flex;gap:10px}
+    .soc{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.9rem;transition:var(--t);text-decoration:none}
+    .soc:hover{background:var(--primary);color:var(--white);transform:translateY(-2px)}
+    .ft-col h4{font-size:.9rem;font-weight:700;color:var(--white);margin-bottom:18px;letter-spacing:.05em}
+    .ft-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .ft-links a{font-size:.87rem;color:rgba(255,255,255,.6);text-decoration:none;transition:var(--t);display:flex;align-items:center;gap:6px}
+    .ft-links a:hover{color:var(--accent);padding-left:4px}
+    .ft-links a i{font-size:.65rem}
+    .ft-ci{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px}
+    .ft-ci i{color:var(--accent);margin-top:2px;font-size:.85rem}
+    .ft-ci span{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.5}
+    .ft-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .ft-bottom p{font-size:.82rem;color:rgba(255,255,255,.4)}
+    .ft-bot-links{display:flex;gap:20px}
+    .ft-bot-links a{font-size:.82rem;color:rgba(255,255,255,.4);text-decoration:none;transition:var(--t)}
+    .ft-bot-links a:hover{color:var(--accent)}
+    .fi{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .fi.vis{opacity:1;transform:translateY(0)}
+    .fd1{transition-delay:.1s}.fd2{transition-delay:.2s}.fd3{transition-delay:.3s}.fd4{transition-delay:.4s}
+    #toast{position:fixed;bottom:32px;right:32px;z-index:5000;background:var(--primary);color:var(--white);padding:14px 24px;border-radius:12px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;box-shadow:var(--shadow-xl);transform:translateY(80px);opacity:0;pointer-events:none;transition:all .4s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;gap:10px}
+    #toast.show{transform:translateY(0);opacity:1}
+    .pg-hero{background:linear-gradient(135deg,#F0F6FF 0%,#F8FAFC 100%);padding:80px 0 60px;text-align:center}
+    @media(max-width:1100px){.ft-grid{grid-template-columns:1fr 1fr;gap:32px}}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}section{padding:60px 0}.container{padding:0 20px}.nav-inner{padding:0 20px}.ft-grid{grid-template-columns:1fr;gap:28px}.ft-bottom{flex-direction:column;text-align:center}}
+
+  .ct-g{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .cf-card{padding:40px}
+  .cf-card h3{font-size:1.4rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+  .cf-sub{font-size:.88rem;color:var(--gray-text);margin-bottom:28px}
+  .fg{margin-bottom:20px}
+  .fg label{display:block;font-size:.84rem;font-weight:600;color:var(--dark);margin-bottom:6px}
+  .fc-in{width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:.92rem;color:var(--dark);background:var(--white);transition:var(--t);font-family:'Inter',sans-serif;outline:none;-webkit-appearance:none;appearance:none}
+  .fc-in:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(11,79,156,.1)}
+  .fc-in::placeholder{color:var(--gray-mid)}
+  textarea.fc-in{resize:vertical;min-height:130px}
+  .fr{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .ci-card{padding:36px;background:var(--gray-bg);border-radius:var(--radius);border:1px solid var(--border)}
+  .ci-card h3{font-size:1.4rem;font-weight:700;color:var(--dark);margin-bottom:24px}
+  .ii{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+  .ii-ic{width:44px;height:44px;border-radius:12px;background:rgba(11,79,156,.08);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+  .ii-lbl{font-size:.78rem;font-weight:600;color:var(--gray-text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+  .ii-val{font-size:.95rem;font-weight:600;color:var(--dark)}
+  .ii-sub{font-size:.82rem;color:var(--gray-text)}
+  .hr-tbl{width:100%;margin-top:8px}
+  .hr-row{display:flex;justify-content:space-between;font-size:.88rem;padding:6px 0;border-bottom:1px solid var(--border)}
+  .hr-row:last-child{border-bottom:none}
+  .hr-row .day{color:var(--gray-text)}.hr-row .time{font-weight:600;color:var(--dark)}
+  .hr-row.cl .time{color:var(--gray-mid)}
+  .map-ph{margin-top:24px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#e8f0fe,#dbeafe);height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border)}
+  .map-ph i{font-size:2rem;color:var(--primary)}.map-ph p{font-size:.84rem;color:var(--gray-text)}
+  @media(max-width:900px){.ct-g{grid-template-columns:1fr}.fr{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="toast"><i class="fas fa-check-circle"></i> <span id="tmsg">Done!</span></div>
+<div id="loader"><img class="loader-logo" src="logo.png" alt="NESH"/><div class="loader-bar"><div class="loader-fill"></div></div><p class="loader-text">Loading...</p></div>
+<nav id="nb">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="NESH Computer Services"/></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="active">Contact</a></li><li><a href="contact.html" class="nav-cta">Get Quote</a></li></ul>
+    <button class="hamburger" id="hb" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-menu" id="mm"><a href="index.html" onclick="closeMenu()">Home</a><a href="services.html" onclick="closeMenu()">Services</a><a href="about.html" onclick="closeMenu()">About</a><a href="contact.html" onclick="closeMenu()">Contact</a><a href="contact.html" class="mob-cta" onclick="closeMenu()">Get Quote</a></div>
+</nav>
+<div class="pt">
+<section class="pg-hero"><div class="container"><div class="badge"><i class="fas fa-envelope"></i> Get In Touch</div><h1 class="sec-title">Contact <span>Us</span></h1><div class="divider"></div><p class="sec-sub" style="margin:16px auto 0">Have a question or need a quote? We'd love to hear from you.</p></div></section>
+<section><div class="container"><div class="ct-g">
+  <div class="card cf-card fi">
+    <h3>Send Us a Message</h3>
+    <p class="cf-sub">Fill in the form below and we'll get back to you within 24 hours.</p>
+    <form id="cform" onsubmit="submitForm(event)" novalidate>
+      <div class="fr">
+        <div class="fg"><label>Full Name *</label><input type="text" id="fn" class="fc-in" placeholder="Your full name" required/></div>
+        <div class="fg"><label>Phone Number *</label><input type="tel" id="fp" class="fc-in" placeholder="011-XXXXXXXX" required/></div>
+      </div>
+      <div class="fg"><label>Email Address *</label><input type="email" id="fe" class="fc-in" placeholder="your@email.com" required/></div>
+      <div class="fg"><label>Subject *</label>
+        <select id="fs" class="fc-in" required>
+          <option value="" disabled selected>Select a subject</option>
+          <option>Laptop Repair</option><option>Desktop PC Repair</option><option>Custom Gaming PC Build</option>
+          <option>SSD Upgrade</option><option>RAM Upgrade</option><option>Windows Installation</option>
+          <option>Virus Removal</option><option>PC Cleaning</option><option>Thermal Paste Replacement</option>
+          <option>Data Backup &amp; Recovery</option><option>General Enquiry</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message *</label><textarea id="fm" class="fc-in" placeholder="Describe your issue or what you need..." required></textarea></div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center"><i class="fas fa-paper-plane"></i> Send Message</button>
+    </form>
+  </div>
+  <div class="fi fd1">
+    <div class="ci-card">
+      <h3>Business Information</h3>
+      <div class="ii"><div class="ii-ic"><i class="fas fa-building"></i></div><div><div class="ii-lbl">Business Name</div><div class="ii-val">NESH COMPUTER SERVICES</div></div></div>
+      <div class="ii"><div class="ii-ic" style="background:rgba(37,211,102,.1);color:#25D366"><i class="fab fa-whatsapp"></i></div><div><div class="ii-lbl">WhatsApp</div><a href="https://wa.me/60113084277" target="_blank" style="text-decoration:none"><div class="ii-val" style="color:var(--primary)">011-30842771</div><div class="ii-sub">Click to chat on WhatsApp</div></a></div></div>
+      <div class="ii"><div class="ii-ic"><i class="fas fa-clock"></i></div><div style="width:100%"><div class="ii-lbl">Business Hours</div><div class="hr-tbl"><div class="hr-row"><span class="day">Monday &ndash; Saturday</span><span class="time">9:00 AM &ndash; 6:00 PM</span></div><div class="hr-row cl"><span class="day">Sunday</span><span class="time">Closed</span></div></div></div></div>
+    </div>
+    <div class="map-ph"><i class="fas fa-map-marker-alt"></i><p>Malaysia</p><p style="font-size:.75rem;color:var(--gray-mid)">Contact us on WhatsApp for exact location</p></div>
+    <div style="margin-top:24px">
+      <a href="https://wa.me/60113084277" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:12px"><i class="fab fa-whatsapp"></i> Chat on WhatsApp Now</a>
+      <a href="services.html" class="btn btn-outline" style="width:100%;justify-content:center"><i class="fas fa-grid-2"></i> View All Services</a>
+    </div>
+  </div>
+</div></div></section>
+</div>
+<script>
+function submitForm(e){e.preventDefault();
+  var n=document.getElementById('fn').value,p=document.getElementById('fp').value,em=document.getElementById('fe').value,s=document.getElementById('fs').value,m=document.getElementById('fm').value;
+  if(!n||!p||!em||!s||!m){showToast('Please fill in all required fields.',true);return}
+  var msg=encodeURIComponent('Hello NESH Computer Services!\n\nName: '+n+'\nPhone: '+p+'\nEmail: '+em+'\nSubject: '+s+'\n\nMessage: '+m);
+  window.open('https://wa.me/60113084277?text='+msg,'_blank');
+  showToast('Redirecting to WhatsApp...');
+  document.getElementById('cform').reset();
+}
+</script>
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="logo.png" alt="NESH Computer Services"/>
+        <p>Professional computer services including laptop repair, desktop repair, gaming PC builds, upgrades and maintenance. Trusted by hundreds across Malaysia.</p>
+        <div class="socials">
+          <a class="soc" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="soc" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="soc" href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a class="soc" href="https://wa.me/60113084277" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Quick Links</h4>
+        <ul class="ft-links">
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Services</h4>
+        <ul class="ft-links">
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Laptop Repair</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Desktop PC Repair</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Gaming PC Build</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> SSD &amp; RAM Upgrade</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Data Recovery</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <div class="ft-ci"><i class="fab fa-whatsapp"></i><span><a href="https://wa.me/60113084277" style="color:rgba(255,255,255,.6);text-decoration:none">011-30842771</a></span></div>
+        <div class="ft-ci"><i class="fas fa-map-marker-alt"></i><span>Malaysia</span></div>
+        <div class="ft-ci"><i class="fas fa-clock"></i><span>Mon - Sat: 9AM - 6PM<br>Sunday: Closed</span></div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>&copy; 2025 NESH Computer Services. All rights reserved.</p>
+      <div class="ft-bot-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('load',function(){setTimeout(function(){document.getElementById('loader').classList.add('hidden');initAnim();},1500)});
+window.addEventListener('scroll',function(){document.getElementById('nb').classList.toggle('scrolled',window.scrollY>10)});
+function toggleMenu(){document.getElementById('hb').classList.toggle('open');document.getElementById('mm').classList.toggle('open')}
+function closeMenu(){document.getElementById('hb').classList.remove('open');document.getElementById('mm').classList.remove('open')}
+function initAnim(){var els=document.querySelectorAll('.fi');var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');ob.unobserve(e.target)}})},{threshold:.1});els.forEach(function(el){ob.observe(el)})}
+document.addEventListener('DOMContentLoaded',function(){initAnim()});
+function showToast(msg,err){var t=document.getElementById('toast');document.getElementById('tmsg').textContent=msg;t.style.background=err?'#DC2626':'var(--primary)';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},3500)}
+</script>
+
+</body>
+</html>
